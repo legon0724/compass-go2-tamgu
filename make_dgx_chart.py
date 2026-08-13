@@ -5,6 +5,7 @@ import numpy as np
 
 
 sizes = np.array([512, 1024, 2048, 4096, 8192])
+# DGX Spark(GB10)에서 측정한 중앙값
 fp32 = np.array([0.04, 0.13, 0.82, 6.31, 50.29])
 tf32 = np.array([0.04, 0.09, 0.53, 4.03, 32.02])
 int8 = np.array([0.03, 0.05, 0.18, 1.25, 9.80])
@@ -26,6 +27,7 @@ bars = [
 ]
 
 ax.set_yscale("log")
+ax.set_title("DGX Spark(GB10·128GB) 정밀도별 행렬곱 실측 결과", pad=12)
 ax.set_xlabel("행렬 크기 N")
 ax.set_ylabel("행렬곱 실행시간 (ms, 로그 눈금)")
 ax.set_xticks(x, [str(v) for v in sizes])
