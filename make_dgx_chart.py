@@ -5,9 +5,9 @@ import numpy as np
 
 
 sizes = np.array([512, 1024, 2048, 4096, 8192])
-fp32 = np.array([0.04, 0.18, 1.28, 10.1, 80.6])
-tf32 = np.array([0.02, 0.05, 0.22, 1.62, 12.8])
-int8 = np.array([0.02, 0.03, 0.08, 0.51, 3.94])
+fp32 = np.array([0.04, 0.13, 0.82, 6.31, 50.29])
+tf32 = np.array([0.04, 0.09, 0.53, 4.03, 32.02])
+int8 = np.array([0.03, 0.05, 0.18, 1.25, 9.80])
 
 plt.rcParams.update({
     "font.family": "Malgun Gothic",
