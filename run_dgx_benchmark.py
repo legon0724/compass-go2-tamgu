@@ -17,7 +17,7 @@ def synchronize():
 def time_cuda(fn, inner_loops, repeats):
     samples = []
     for _ in range(repeats):
-        # CUDA 이벤트로 GPU 실행 시간만 잰다.
+        # CUDA 이벤트로 GPU 실행 시간만
         start = torch.cuda.Event(enable_timing=True)
         end = torch.cuda.Event(enable_timing=True)
         start.record()
@@ -64,7 +64,7 @@ def get_nvidia_smi():
 
 
 def loop_count(n):
-    # 작은 행렬은 여러 번 돌려 오차를 줄인다.
+    # 작은 행렬은 여러 번 돌려 오차를 줄이기
     if n <= 1024:
         return 100
     if n <= 2048:
@@ -82,7 +82,7 @@ def run_case(n, repeats, seed):
     qb, scale_b = quantize_symmetric(b)
     loops = loop_count(n)
 
-    # 첫 실행은 느릴 수 있어서 예열한다.
+    # 첫 실행은 느릴 수 있어서 예열
     for _ in range(3):
         _ = a @ b
         _ = torch._int_mm(qa, qb)
@@ -96,7 +96,7 @@ def run_case(n, repeats, seed):
 
     int8_samples = time_cuda(lambda: torch._int_mm(qa, qb), loops, repeats)
 
-    # 양자화 시간은 행렬곱과 따로 측정한다.
+    # 양자화 시간은 행렬곱과 따로 측정
     quant_samples = []
     for _ in range(repeats):
         synchronize()
