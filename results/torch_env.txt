@@ -1,0 +1,1 @@
+2.9.0a0+50eac811a6.nv25.09 13.0 True NVIDIA GB10 True

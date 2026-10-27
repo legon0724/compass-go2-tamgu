@@ -1,0 +1,146 @@
+[
+  {
+    "n": 64,
+    "float32_trials_ms": [
+      0.005,
+      0.0159,
+      0.0062,
+      0.0051,
+      0.0044
+    ],
+    "int8_to_int32_trials_ms": [
+      0.1066,
+      0.1584,
+      0.1585,
+      0.1089,
+      0.1076
+    ],
+    "float32_median_ms": 0.0051,
+    "int8_to_int32_median_ms": 0.1089,
+    "float32_over_int_path_speed_ratio": 0.046831955922865015,
+    "int_path_over_float32_slowdown": 21.352941176470587,
+    "nmae_percent": 1.151877093808671,
+    "scale_a": 0.02960470342260646,
+    "scale_b": 0.02730629950996459
+  },
+  {
+    "n": 128,
+    "float32_trials_ms": [
+      0.0971,
+      0.0963,
+      0.0773,
+      0.1227,
+      0.095
+    ],
+    "int8_to_int32_trials_ms": [
+      1.2468,
+      1.0406,
+      1.2016,
+      1.3002,
+      1.3757
+    ],
+    "float32_median_ms": 0.0963,
+    "int8_to_int32_median_ms": 1.2468,
+    "float32_over_int_path_speed_ratio": 0.07723772858517806,
+    "int_path_over_float32_slowdown": 12.947040498442368,
+    "nmae_percent": 1.2548969902442177,
+    "scale_a": 0.030757945353590596,
+    "scale_b": 0.030430664227703425
+  },
+  {
+    "n": 256,
+    "float32_trials_ms": [
+      0.1975,
+      0.2456,
+      0.1786,
+      0.2111,
+      0.1655
+    ],
+    "int8_to_int32_trials_ms": [
+      11.97,
+      11.6271,
+      11.9704,
+      11.4948,
+      12.1622
+    ],
+    "float32_median_ms": 0.1975,
+    "int8_to_int32_median_ms": 11.97,
+    "float32_over_int_path_speed_ratio": 0.016499582289055972,
+    "int_path_over_float32_slowdown": 60.607594936708864,
+    "nmae_percent": 1.406910452570484,
+    "scale_a": 0.036141327985628385,
+    "scale_b": 0.03272358075840267
+  },
+  {
+    "n": 512,
+    "float32_trials_ms": [
+      0.8916,
+      0.9432,
+      0.929,
+      0.9003,
+      0.6822
+    ],
+    "int8_to_int32_trials_ms": [
+      172.4942,
+      167.6507,
+      166.9786,
+      167.7405,
+      171.892
+    ],
+    "float32_median_ms": 0.9003,
+    "int8_to_int32_median_ms": 167.7405,
+    "float32_over_int_path_speed_ratio": 0.005367219007931895,
+    "int_path_over_float32_slowdown": 186.31622792402533,
+    "nmae_percent": 1.5740185155137385,
+    "scale_a": 0.03885764399851401,
+    "scale_b": 0.03830890204962783
+  },
+  {
+    "n": 1024,
+    "float32_trials_ms": [
+      6.0144,
+      5.1075,
+      4.3587,
+      4.679,
+      4.6392
+    ],
+    "int8_to_int32_trials_ms": [
+      4137.3496,
+      4156.9421,
+      4137.6518,
+      4154.6555,
+      4161.3814
+    ],
+    "float32_median_ms": 4.679,
+    "int8_to_int32_median_ms": 4154.6555,
+    "float32_over_int_path_speed_ratio": 0.0011262064929330484,
+    "int_path_over_float32_slowdown": 887.9366317589228,
+    "nmae_percent": 1.679783514850353,
+    "scale_a": 0.04193031506275567,
+    "scale_b": 0.04030028666098287
+  },
+  {
+    "n": 2048,
+    "float32_trials_ms": [
+      52.6555,
+      36.1914,
+      33.4817,
+      35.9098,
+      46.8837
+    ],
+    "int8_to_int32_trials_ms": [
+      38825.1318,
+      41604.4473,
+      38184.8596,
+      40992.0565,
+      38807.5941
+    ],
+    "float32_median_ms": 36.1914,
+    "int8_to_int32_median_ms": 38825.1318,
+    "float32_over_int_path_speed_ratio": 0.0009321642534642986,
+    "int_path_over_float32_slowdown": 1072.772310548915,
+    "nmae_percent": 1.6798557112345396,
+    "scale_a": 0.03992411846251,
+    "scale_b": 0.04229976999478077
+  }
+]

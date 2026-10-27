@@ -1,0 +1,122 @@
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+N=512 측정 중
+N=1024 측정 중
+N=2048 측정 중
+N=4096 측정 중
+N=8192 측정 중
+{
+  "environment": {
+    "timestamp_local": "2026-10-26 10:52:30",
+    "platform": "Linux-6.17.0-1031-nvidia-aarch64-with-glibc2.39",
+    "python": "3.12.3",
+    "pytorch": "2.9.0a0+50eac811a6.nv25.09",
+    "cuda_runtime": "13.0",
+    "cudnn": 91300,
+    "gpu_count": 1,
+    "selected_gpu": "NVIDIA GB10",
+    "compute_capability": "12.1",
+    "nvidia_smi": [
+      "NVIDIA GB10, 580.173.02, [N/A], [N/A], 12.1"
+    ],
+    "seed": 20260813,
+    "sizes": [
+      512,
+      1024,
+      2048,
+      4096,
+      8192
+    ],
+    "repeats": 7,
+    "method": "symmetric per-tensor INT8, INT32 accumulation, CUDA Event median"
+  },
+  "results": [
+    {
+      "n": 512,
+      "inner_loops": 100,
+      "repeats": 7,
+      "fp32_ms": 0.030000638961791993,
+      "tf32_ms": 0.012346559762954712,
+      "int8_int32_ms": 0.018496960401535034,
+      "quantization_ms": 0.08291192352771759,
+      "fp32_vs_int8_speedup": 1.6219226462366372,
+      "tf32_vs_int8_speedup": 0.6674912793742095,
+      "nmae_percent": 1.6025274991989136,
+      "fp32_tflops": 8.947657959614533,
+      "tf32_tflops": 21.7417208642547,
+      "int8_tops": 14.512409075478313,
+      "input_memory_fp32_mib": 2.0,
+      "input_memory_int8_mib": 0.5
+    },
+    {
+      "n": 1024,
+      "inner_loops": 100,
+      "repeats": 7,
+      "fp32_ms": 0.1389971160888672,
+      "tf32_ms": 0.06333343982696533,
+      "int8_int32_ms": 0.06302175998687744,
+      "quantization_ms": 0.22329576313495636,
+      "fp32_vs_int8_speedup": 2.2055416433595245,
+      "tf32_vs_int8_speedup": 1.0049455908586622,
+      "nmae_percent": 1.5739487409591675,
+      "fp32_tflops": 15.449843194063218,
+      "tf32_tflops": 33.90757953250584,
+      "int8_tops": 34.07527254788116,
+      "input_memory_fp32_mib": 8.0,
+      "input_memory_int8_mib": 2.0
+    },
+    {
+      "n": 2048,
+      "inner_loops": 30,
+      "repeats": 7,
+      "fp32_ms": 1.0419050852457683,
+      "tf32_ms": 0.4767936070760091,
+      "int8_int32_ms": 0.3503690719604492,
+      "quantization_ms": 1.1649918742477894,
+      "fp32_vs_int8_speedup": 2.9737358934563205,
+      "tf32_vs_int8_speedup": 1.360832462774657,
+      "nmae_percent": 1.6674455404281616,
+      "fp32_tflops": 16.48890040684229,
+      "tf32_tflops": 36.03208794966338,
+      "int8_tops": 49.033634983453446,
+      "input_memory_fp32_mib": 32.0,
+      "input_memory_int8_mib": 8.0
+    },
+    {
+      "n": 4096,
+      "inner_loops": 10,
+      "repeats": 7,
+      "fp32_ms": 7.678288269042969,
+      "tf32_ms": 3.3011871337890626,
+      "int8_int32_ms": 2.440140724182129,
+      "quantization_ms": 6.121439393609762,
+      "fp32_vs_int8_speedup": 3.146657974661084,
+      "tf32_vs_int8_speedup": 1.352867521562935,
+      "nmae_percent": 1.8077995777130127,
+      "fp32_tflops": 17.899686578077716,
+      "tf32_tflops": 41.63319069835621,
+      "int8_tops": 56.32419151484222,
+      "input_memory_fp32_mib": 128.0,
+      "input_memory_int8_mib": 32.0
+    },
+    {
+      "n": 8192,
+      "inner_loops": 3,
+      "repeats": 7,
+      "fp32_ms": 56.01409912109375,
+      "tf32_ms": 27.777974446614582,
+      "int8_int32_ms": 18.814015706380207,
+      "quantization_ms": 23.204330820590258,
+      "fp32_vs_int8_speedup": 2.9772537663024408,
+      "tf32_vs_int8_speedup": 1.4764511138998635,
+      "nmae_percent": 1.8583664894104004,
+      "fp32_tflops": 19.629194167686734,
+      "tf32_tflops": 39.582138355304096,
+      "int8_tops": 58.44109226522723,
+      "input_memory_fp32_mib": 512.0,
+      "input_memory_int8_mib": 128.0
+    }
+  ]
+}
+저장: results/dgx_results.json
+저장: results/dgx_results.csv

@@ -1,0 +1,16 @@
+DGX Spark 실제 터미널 캡처
+
+실행 명령:
+docker run --gpus all --rm -v "$PWD":/workspace -w /workspace nvcr.io/nvidia/pytorch:25.09-py3 bash run_all.sh
+
+캡처 방식:
+- DGX의 Xvfb 가상 X 화면에서 실제 GNOME Terminal을 실행했습니다.
+- 위 명령의 실제 stdout/stderr가 터미널에 직접 표시된 뒤 gnome-screenshot으로 캡처했습니다.
+- actual_terminal_full.png는 1920x5600 원본 화면입니다.
+- actual_terminal_page_1.png~4.png는 원본을 읽기 좋게 겹쳐 자른 이미지이며 텍스트를 추가·삭제·재배열하지 않았습니다.
+- 화면의 [capture wrapper] 두 줄은 자동 캡처 시작과 종료 코드 표시용입니다. 그 사이가 run_all.sh의 원본 출력입니다.
+- 실행 종료 코드는 benchmark.exit에 저장되어 있으며 값은 0입니다.
+- SHA256SUMS.txt는 DGX에서 캡처 직후 생성했습니다.
+
+주의:
+이 이미지는 물리 모니터를 휴대폰으로 촬영한 사진이 아니라 실제 GNOME Terminal의 픽셀 캡처입니다.
